@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Inventory List</title>
+</head>
+<body>
+    <h1>Inventory List</h1>
+    <table border="1">
+        <tr>
+            <th>Product ID</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Price</th>
+            <th>Stock</th>
+            <th>Total Sales</th>
+        </tr>
+        {% for item in inventory %}
+        <tr>
+            <td>{{ item['Product ID'] }}</td>
+            <td>{{ item['Product Name'] }}</td>
+            <td>{{ item['Category'] }}</td>
+            <td>{{ item['Price'] }}</td>
+            <td>{{ item['Stock'] }}</td>
+            <td>{{ item['Total Sales'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{{ url_for('index') }}">Back</a>
+</body>
+</html>
